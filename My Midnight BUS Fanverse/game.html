@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game | Midnight Blue BUS Fanverse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">Midnight <span>BUS</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="game.html" class="active">Quiz Game</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container quiz-shell">
+      <div class="glass-card quiz-intro" id="quizIntro">
+        <h1 class="section-title">BUS Memory Quiz</h1>
+        <p class="section-desc">
+          เกมนี้จะให้ผู้เล่นตอบคำถามจากข้อมูลของสมาชิกที่ได้อ่านมาก่อนหน้า
+          เมื่อกดเริ่มเกม ระบบจะสุ่มคำถามขึ้นมาและนับคะแนนให้โดยอัตโนมัติ
+        </p>
+        <div class="btn-group">
+          <button class="btn btn-primary" id="startBtn">Start Game</button>
+          <a href="members.html" class="btn btn-secondary">Review Members</a>
+        </div>
+      </div>
+
+      <div class="glass-card quiz-box" id="quizBox">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="quiz-meta">
+          <p id="questionCount">Question 1/5</p>
+          <p id="scoreText">Score: 0</p>
+        </div>
+
+        <h2 class="quiz-question" id="questionText">Question here</h2>
+
+        <div class="answer-grid" id="answerButtons"></div>
+
+        <p class="feedback" id="feedback"></p>
+
+        <div class="quiz-actions">
+          <button class="btn btn-secondary" id="nextBtn" style="display: none;">Next Question</button>
+        </div>
+      </div>
+
+      <div class="glass-card quiz-result" id="quizResult">
+        <h2 class="section-title">Your Result</h2>
+        <p class="section-desc" id="resultText"></p>
+        <div class="btn-group">
+          <button class="btn btn-primary" id="restartBtn">Play Again</button>
+          <a href="members.html" class="btn btn-secondary">Back to Members</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Interactive JavaScript Quiz Page</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
