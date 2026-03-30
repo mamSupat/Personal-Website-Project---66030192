@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Game | Midnight Blue BUS Fanverse</title>
+  <title>Quiz Game | My Midnight BUS Fanverse</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="container navbar-inner">
-      <a href="index.html" class="logo">Midnight <span>BUS</span></a>
+      <a href="index.html" class="logo">My Midnight <span>BUS Fanverse</span></a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="members.html">Members</a>
@@ -21,53 +21,72 @@
 
   <main class="section">
     <div class="container quiz-shell">
-      <div class="glass-card quiz-intro" id="quizIntro">
+
+      <!-- หน้าเริ่มเกม -->
+      <section class="glass-card quiz-screen" id="startScreen">
+        <p class="eyebrow">Interactive JavaScript Game</p>
         <h1 class="section-title">BUS Memory Quiz</h1>
-        <p class="section-desc">
-          เกมนี้จะให้ผู้เล่นตอบคำถามจากข้อมูลของสมาชิกที่ได้อ่านมาก่อนหน้า
-          เมื่อกดเริ่มเกม ระบบจะสุ่มคำถามขึ้นมาและนับคะแนนให้โดยอัตโนมัติ
+        <p class="section-desc center-text">
+          เกมนี้จะใช้ข้อมูลของสมาชิกวง BUS จากหน้า Members
+          ผู้เล่นต้องตอบคำถามว่า “ข้อมูลนี้เป็นของใคร”
         </p>
-        <div class="btn-group">
+
+
+
+        <div class="btn-group center-buttons">
           <button class="btn btn-primary" id="startBtn">Start Game</button>
           <a href="members.html" class="btn btn-secondary">Review Members</a>
         </div>
-      </div>
+      </section>
 
-      <div class="glass-card quiz-box" id="quizBox">
+      <!-- หน้าเล่นเกม -->
+      <section class="glass-card quiz-screen hidden" id="quizScreen">
         <div class="progress-bar">
           <div class="progress-fill" id="progressFill"></div>
         </div>
 
         <div class="quiz-meta">
-          <p id="questionCount">Question 1/5</p>
+          <p id="questionCount">Question 1 / 12</p>
           <p id="scoreText">Score: 0</p>
         </div>
 
-        <h2 class="quiz-question" id="questionText">Question here</h2>
+        <h2 class="quiz-question" id="questionText">คำถามจะแสดงตรงนี้</h2>
 
         <div class="answer-grid" id="answerButtons"></div>
 
         <p class="feedback" id="feedback"></p>
 
         <div class="quiz-actions">
-          <button class="btn btn-secondary" id="nextBtn" style="display: none;">Next Question</button>
+          <button class="btn btn-secondary hidden" id="nextBtn">Next Question</button>
         </div>
-      </div>
+      </section>
 
-      <div class="glass-card quiz-result" id="quizResult">
-        <h2 class="section-title">Your Result</h2>
-        <p class="section-desc" id="resultText"></p>
-        <div class="btn-group">
+      <!-- หน้าคะแนน -->
+      <section class="glass-card score-screen hidden" id="scoreScreen">
+        <p class="eyebrow">Final Result</p>
+        <h1 class="section-title">Your Score</h1>
+
+        <div class="score-circle">
+          <span id="finalScore">0/12</span>
+        </div>
+
+        <h2 class="score-level" id="scoreLevel">BUS Fan Level</h2>
+        <p class="section-desc center-text" id="scoreMessage">
+          ข้อความสรุปผลจะขึ้นตรงนี้
+        </p>
+
+        <div class="btn-group center-buttons">
           <button class="btn btn-primary" id="restartBtn">Play Again</button>
           <a href="members.html" class="btn btn-secondary">Back to Members</a>
         </div>
-      </div>
+      </section>
+
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>Interactive JavaScript Quiz Page</p>
+      <p>Interactive quiz created with JavaScript</p>
     </div>
   </footer>
 
